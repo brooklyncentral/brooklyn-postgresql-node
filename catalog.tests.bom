@@ -78,7 +78,6 @@ brooklyn.catalog:
             effector: executeScript
             params:
               commands: |
-                USE temporary;
                 INSERT INTO users VALUES ('root', 'root', CURRENT_DATE, CURRENT_DATE);
           - type: org.apache.brooklyn.test.framework.SimpleShellCommandTest
             name: Check PostgreSQL creating script has been executed
