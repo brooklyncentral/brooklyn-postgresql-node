@@ -44,7 +44,6 @@ brooklyn.catalog:
         brooklyn.config:
           datastore.creation.script.contents: |
             CREATE DATABASE temporary;
-            USE temporary;
             CREATE TABLE users (name VARCHAR(20), owner VARCHAR(20), creation_date DATE, updated_date DATE);
             INSERT INTO users VALUES ('mysql', 'mysql', CURRENT_DATE, CURRENT_DATE)
       - type: test-case
